@@ -1,0 +1,381 @@
+.body {
+  background-image: url(images/Background.png);
+  color: white;
+  font-family: Roboto, sans-serif;
+  width: 100%;
+  background-size: cover;
+  background-attachment: scroll;
+  min-width: 320px;
+  overflow: hidden;
+  min-height: 1024px;
+  background-repeat: no-repeat;
+}
+
+.menu {
+  display: flex;
+  flex-flow: column;
+}
+
+.title {
+  font-size: 55.5px;
+  padding-left: 94px;
+  margin-bottom: 0;
+  padding-top: 79px;
+}
+
+.text {
+  font-size: 19px;
+  margin: 0;
+  padding-top: 7px;
+  padding-left: 97px;
+}
+
+.difficults {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 49px;
+  line-height: 59px;
+  padding-top: 55px;
+  padding-left: 145px;
+}
+
+.difficult__normal {
+  padding-top: 26px;
+}
+
+.difficult__hard {
+  padding-top: 22px;
+}
+
+.difficult:hover {
+  color: black;
+  opacity: .7;
+  transition: .5s;
+}
+
+.difficult__normal,
+.difficult__easy,
+.difficult__hard {
+  position: relative;
+}
+
+.difficult-check {
+  width: 18px;
+  height: 18px;
+  background-color: red;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 45px;
+  left: -47px;
+}
+
+.difficult:nth-child(1) .difficult-check {
+  top: 23px;
+}
+
+.cards {
+  display: flex;
+  padding-top: 21px;
+  margin-right: 58px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.card {
+  width: 100%;
+}
+
+.card-wrap {
+  width: 100%;
+}
+
+.start-card {
+  width: 100%;
+}
+
+.card-wrap:nth-child(1) {
+  transform: rotate(11.9deg);
+}
+
+.card-wrap:nth-child(2) {
+  transform: rotate(39.26deg) translate(-22px, 42px);
+}
+
+.bottom {
+  width: 97%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.btn {
+  height: 95px;
+  width: 350px;
+  background: #d62b2e;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-bottom: 44px;
+  margin-left: 95px;
+  margin-top: 18px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.btn:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+  transform: translateY(5px);
+}
+
+.table {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  width: 100%;
+}
+
+.field {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+}
+
+.table-card__wrap {
+  width: 219px;
+  height: 343px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  display: none;
+  background-color: transparent;
+  position: relative;
+  transition: transform .6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.rotate {
+  transform: rotateY(180deg);
+  padding-left: 20px;
+  padding-right: 0;
+}
+
+.card-back {
+  transform-style: preserve-3d;
+  transition: transform .8s;
+  height: 312px;
+}
+
+.card-back,
+.card-front {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  width: 85%;
+  top: 8%;
+}
+
+.card-loser {
+  width: 100%;
+}
+
+.card-back:hover {
+  transform: translate3d(-10px, -30px, -40px) rotate(-3.08deg);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, .5);
+  transition: .8s;
+}
+
+.card-front {
+  transform: rotateY(180deg);
+}
+
+@media (max-width: 1200px) {
+  .table-card__wrap {
+    padding-right: 0;
+    padding-bottom: 0;
+    width: 160px;
+    height: 240px;
+  }
+
+  .card-back {
+    width: 85%;
+  }
+
+  .card-front {
+    width: 85%;
+  }
+
+  .card-loser {
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .card-front {
+    width: 75%;
+  }
+
+  .card-wrap {
+    width: 35%;
+  }
+
+  .cards {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 980px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .text {
+    font-size: 12px;
+  }
+
+  .difficults {
+    font-size: 32px;
+    line-height: 34px;
+    padding-left: 119px;
+  }
+
+  .card-wrap {
+    width: 33%;
+  }
+
+  .cards {
+    right: -15%;
+  }
+
+  .start-card {
+    width: 100%;
+  }
+
+  .difficult-check {
+    top: 36px;
+  }
+
+  .difficult:nth-child(1) .difficult-check {
+    top: 10px;
+  }
+}
+
+@media (max-width: 812px) {
+  .cards {
+    right: -30%;
+    bottom: 98%;
+  }
+
+  .card-wrap {
+    width: 25%;
+  }
+}
+
+@media (max-width: 710px) {
+  .title {
+    padding-left: 60px;
+  }
+
+  .text {
+    padding-left: 65px;
+  }
+
+  .difficults {
+    padding-left: 80px;
+    line-height: 32px;
+  }
+
+  .btn {
+    margin-left: 48px;
+  }
+
+  .cards {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 675px) {
+  .bottom {
+    flex-flow: wrap;
+    margin-top: 53px;
+    justify-content: center;
+  }
+
+  .cards {
+    display: none;
+  }
+
+  .table-card__wrap {
+    width: 150px;
+    height: 220px;
+  }
+
+  .title {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .text {
+    padding-left: 0;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .difficults {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .btn {
+    margin-left: 0;
+  }
+
+  .difficult-check {
+    left: 135px;
+    top: 33px;
+  }
+}
+
+@media (max-width: 569px) {
+  .title {
+    padding-left: 10px;
+    font-size: 33px;
+  }
+
+  .text {
+    padding-left: 15px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 476px) {
+  .difficult-check {
+    left: 110px;
+  }
+
+  .table-card__wrap {
+    width: 110px;
+    height: 150px;
+  }
+
+  .card-front {
+    width: 70%;
+  }
+}
+
+@media (max-width: 415px) {
+  .difficult-check {
+    left: 60px;
+  }
+}
